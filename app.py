@@ -2,12 +2,14 @@ import streamlit as st
 import nltk
 import numpy as np
 import string
-from nltk.stem import PorterStemmer
+from nltk.stem import PorterStemmer 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+nltk.download('punkt')
+nltk.download('stopwords')
 # Sample knowledge base with website references
 faq_data = {
     "hello": "Hello! How can I assist you today?",
